@@ -45,13 +45,16 @@ public class DesmosFunctionality {
     }
     @When("User performs mathematical operation {} on two one digit numbers: {} and {}")
     public void user_performs_mathematical_on_two_numbers(String operation, String  numberA, String numberB) {
+
         funct.DigitInput(numberA,button);
         funct.SignInput(operation,button);
         funct.DigitInput(numberB, button);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @When("User performs mathematical operation {} on three numbers: {} and {} and {}")
     public void Perform_three_number_operation (String operation, String  numberA, String numberB, String numberC){
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         funct.DigitInput(numberA, button);
         funct.SignInput(operation,button);
         funct.DigitInput(numberB,button);
@@ -60,7 +63,7 @@ public class DesmosFunctionality {
     }
     @When("User performs mixed mathematical operation on three numbers: {} {} {} {} {}")
     public void Perform_mixed_operations (String  numberA, String operation, String numberB, String operation2, String numberC ){
-
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         funct.DigitInput(numberA, button);
 
         funct.SignInput(operation,button);
