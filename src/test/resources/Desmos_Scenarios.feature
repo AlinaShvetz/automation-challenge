@@ -16,7 +16,7 @@ Feature: Calculator displays correct Results
     When User performs mathematical operation <operation> on three numbers: <numberA> and <numberB> and <numberC>
     Then He gets the correct result <result>
     Examples:
-      |numberA| operation| numberB| operation| numberC|result|
+      |numberA| operation| numberB| operation| numberC|result  |
       |343    |+         |30      |+         |3       | 376.0  |
       |894    |-         |33      |-         |342     | 519.0  |
       |403    |/         |10      |/         |5       | 8.06   |
